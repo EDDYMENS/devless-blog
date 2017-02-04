@@ -49,10 +49,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a class="btn-warning" href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a class="btn btn-warning" href="/login">Post an Article</a>
+                        <a class="btn btn-warning" href="/login">Post an Article</a><br>
+                    </li>
+                    <li>
+                        <a class="btn btn-warning dv-logout" action="//">Log Out</a>
                     </li>
 
                 </ul>
@@ -79,29 +82,38 @@
     </header>
 
 <!-- Main Content -->
+<div class="dv-notify-success alert alert-success" style="color:green; text-align: center;">Your post has been added succesfully</div>
+<div class="dv-notify-failed alert alert-danger" style="color:red; text-align: center;">Oops! Something went wrong.</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
             <p class="text-center">Write out thy heart</p>
-            <form name="sentMessage" id="contactForm" novalidate>
+            <form name="sentMessage" id="contactForm" novalidate class="dv-add-oneto:blog:posts">
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>TITLE</label>
-                        <input type="text" class="form-control" placeholder="Pick a cool Post Title" id="title" required data-validation-required-message="Did you forget to add a title?">
+                        <input type="text" class="form-control" placeholder="Pick a cool Post Title" name="title" id="title">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>SUBTITLE</label>
+                        <input type="text" class="form-control" name="subtitle" placeholder="Pick a Subtitle" name="subtitle" id="subtitle">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>IMAGE</label>
-                        <input type="file" class="form-control" placeholder="Pick a cool Post Title" id="title" required data-validation-required-message="Did you forget to add a title?">
+                        <input type="file" class="form-control" name="image" placeholder="Pick a cool Post Title" id="title">
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
                 <div class="row control-group">
                     <div class="form-group col-xs-12 floating-label-form-group controls">
                         <label>POST</label>
-                        <textarea rows="5" class="form-control" placeholder="Go on Story Time ..." id="message" required data-validation-required-message="Really!! a post without a body?"></textarea>
+                        <textarea rows="5" class="form-control" name="post" placeholder="Go on Story Time ..." id="message"></textarea>
                         <p class="help-block text-danger"></p>
                     </div>
                 </div>
@@ -131,6 +143,7 @@
         </div>
     </footer>
 
+    <script src="http://45.79.111.65:7682/js/devless-sdk.js" class="devless-connection" devless-con-token="fd39193aa1419913b4d06ac0b24223a5"></script>
     <!-- jQuery -->
     <script src="/vendor/jquery/jquery.min.js"></script>
 
