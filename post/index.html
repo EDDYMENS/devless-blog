@@ -9,16 +9,16 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>DevLess Blog - Blog Post</title>
+    <title>Clean Blog</title>
 
     <!-- Bootstrap Core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Theme CSS -->
-    <link href="css/clean-blog.min.css" rel="stylesheet">
+    <link href="/css/clean-blog.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -42,24 +42,19 @@
                     <span class="sr-only">Toggle navigation</span>
                     Menu <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="index.html">Devless Blog</a>
+                <a class="navbar-brand" href="/">DevLess Blog</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="index.html">Home</a>
+                        <a href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a href="admin.html">New Blog Post</a>
+                        <a class="btn btn-warning" href="/login">Post an Article</a>
                     </li>
-                    <li>
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li>
-                        <a href="#"></a>
-                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -69,83 +64,63 @@
 
     <!-- Page Header -->
     <!-- Set your background image for this header on the line below. -->
-    <header class="intro-header" style="background-image: url('img/post-bg.jpg')">
+    <header class="intro-header" style="background-image: url('/img/home-bg.jpg')">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="post-heading">
-                    <div class="dv-where:id:post_id:get-all:dvblog:posts">
-                        <h1 class="var-title"></h1>
-                        <h2 class="subheading var-subtitle"></h2>
-                        <span class="meta">Posted by <a href="#" class="var-author">...</a> on <span class="var-date">---</span></span>
+                    <div class="site-heading">
+                        <div class="dv-where:id:post_id:get-all:blog:posts">
+                        <h1 class="var-title">...</h1>
+                        <hr class="small">
+                        <span class="subheading var-subtitle">...</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
 
+   
     <!-- Post Content -->
     <article>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <div class="dv-where:id:post_id:get-all:blog:posts">
-                        <center><img src="" class="var-image" width="200" height="200"></center>
-                        <p class="var-post">---</p>
-                    </div>
+                  <div class="dv-where:id:post_id:get-all:blog:posts">  
+                   <center> <img src="" class="var-image" width="200" height="200"></center>
+                    <p class="var-post">...</p>
                 </div>
             </div>
         </div>
     </article>
 
     <hr>
-
-    <!-- Footer -->
+<!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-                    <ul class="list-inline text-center">
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fa fa-github fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                    </ul>
-                    <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+
+                    <p class="copyright text-muted">Copyright &copy; Your Website 2017</p>
                 </div>
             </div>
         </div>
     </footer>
+ <!-- jQuery -->
+    <script src="http://45.79.111.65:7682/js/devless-sdk.js" class="devless-connection" devless-con-token="fd39193aa1419913b4d06ac0b24223a5"></script>
 
     <!-- jQuery -->
-    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/vendor/bootstrap/js/bootstrap.min.js"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="/js/jqBootstrapValidation.js"></script>
+    <script src="/js/contact_me.js"></script>
 
     <!-- Theme JavaScript -->
-    <script src="js/clean-blog.min.js"></script>
-
+    <script src="/js/clean-blog.min.js"></script>
 </body>
 
 </html>

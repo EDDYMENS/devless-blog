@@ -49,10 +49,13 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a href="/contact">Contact</a>
+                        <a class="btn-warning" href="/contact">Contact</a>
                     </li>
                     <li>
-                        <a class="btn btn-warning" href="/login">Post an Article</a>
+                        <a class="btn btn-warning" href="/login">Post an Article</a><br>
+                    </li>
+                    <li>
+                        <a class="btn btn-warning dv-logout" action="//">Log Out</a>
                     </li>
 
                 </ul>
@@ -78,36 +81,57 @@
         </div>
     </header>
 
-    <!-- Main Content -->
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <div class="dv-get-all:blog:posts">
-                <div class="post-preview">
-                    <a href="/post?post_id=var-id" class="var-id">
-                        <h2 class="post-title">
-                          <span class="var-title">---</span>
-                        </h2>
-                        <h3 class="post-subtitle">
-                            <span class="var-subtitle">---</span>
-                        </h3>
-                        <h4 class="var-author">
-                            ---
-                        </h4>
-                    </a>
-
+<!-- Main Content -->
+<div class="dv-notify-success alert alert-success" style="color:green; text-align: center;">Your post has been added succesfully</div>
+<div class="dv-notify-failed alert alert-danger" style="color:red; text-align: center;">Oops! Something went wrong.</div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <p class="text-center">Write out thy heart</p>
+            <form name="sentMessage" id="contactForm" novalidate class="dv-add-oneto:blog:posts">
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>TITLE</label>
+                        <input type="text" class="form-control" placeholder="Pick a cool Post Title" name="title" id="title">
+                        <p class="help-block text-danger"></p>
+                    </div>
                 </div>
-
-                <hr>
-                <!-- Pager -->
-            </div>
-            </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>SUBTITLE</label>
+                        <input type="text" class="form-control" name="subtitle" placeholder="Pick a Subtitle" name="subtitle" id="subtitle">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>IMAGE</label>
+                        <input type="file" class="form-control" name="image" placeholder="Pick a cool Post Title" id="title">
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <div class="row control-group">
+                    <div class="form-group col-xs-12 floating-label-form-group controls">
+                        <label>POST</label>
+                        <textarea rows="5" class="form-control" name="post" placeholder="Go on Story Time ..." id="message"></textarea>
+                        <p class="help-block text-danger"></p>
+                    </div>
+                </div>
+                <br>
+                <div id="success"></div>
+                <div class="row">
+                    <div class="form-group col-xs-12">
+                        <button type="submit" class="btn btn-default">Publish</button>
+                    </div>
+                </div>
+            </form>
         </div>
     </div>
+</div>
 
-    <hr>
+<hr>
 
-   <!-- Footer -->
+<!-- Footer -->
     <footer>
         <div class="container">
             <div class="row">
@@ -119,9 +143,8 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
     <script src="http://45.79.111.65:7682/js/devless-sdk.js" class="devless-connection" devless-con-token="fd39193aa1419913b4d06ac0b24223a5"></script>
-
+    <!-- jQuery -->
     <script src="/vendor/jquery/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
